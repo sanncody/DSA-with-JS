@@ -20,5 +20,19 @@ for (let j = arr.length - 1; j >= 0; j--) {
     i++;
 }
 
+// console.log();
+// console.log(`The reversed array is: [ ${revArr.join(', ')} ]`);
+
+
+// Optimised Algorithm (2-pointer Algorithm)
+let a = 0, b = arr.length - 1;
+while (a < b) {
+    let temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+    a++;
+    b--;
+}
+
 console.log();
-console.log(`The reversed array is: [ ${revArr.join(', ')} ]`);
+console.log(`The reversed array is: [ ${arr.join(', ')} ]`)
