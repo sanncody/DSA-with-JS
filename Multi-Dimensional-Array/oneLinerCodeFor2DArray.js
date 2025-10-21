@@ -8,3 +8,7 @@ for (let i = 0; i < arr.length; i++) {
     }
     console.log();
 }
+
+let Arr = new Array(5).fill(new Array(3).fill(0));
+
+console.log(Arr);
