@@ -1,3 +1,5 @@
+/* A jagged array has variable-length sub-arrays. */
+
 const prompt = require('./utils/promptSync');
 
 const outerArrSize = Number(prompt("Enter Outer array size: "));
