@@ -12,6 +12,8 @@ for (let i = 0; i <= str.length - 1; i++) {
         toggled += String.fromCharCode(ascii + 32);
     } else if (ascii >= 97 && ascii <= 122) {
         toggled += String.fromCharCode(ascii - 32);
+    } else {
+        toggled += str.charAt(i); // case when there is non-alphabetical character, it can remain unchanged and printed as it is
     }
 }
 
