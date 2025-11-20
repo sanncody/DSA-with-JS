@@ -1,4 +1,4 @@
-const prompt = require('prompt-sync')();
+const prompt = require("./utils/promptSync");
 
 const str = prompt("Enter a string: ");
 

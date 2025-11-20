@@ -1,4 +1,5 @@
-const prompt = require('prompt-sync')();
+const prompt = require("./utils/promptSync");
+
 
 const size = Number(prompt("Enter number of words to be inserted in 'words' array: "));
 
