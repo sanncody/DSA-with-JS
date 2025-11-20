@@ -2,7 +2,9 @@
 
 const prompt = require("./utils/promptSync");
 
-const str = prompt("Enter a string: ");
+let str = prompt("Enter a string: ");
+
+str = str.replaceAll(" ", ""); // This is just to ignore spaces in string
 
 let freq = new Array(123).fill(0);
 
@@ -16,4 +18,3 @@ for (let i = 0; i < freq.length; i++) {
         console.log(`${String.fromCharCode(i)} -> ${freq[i]}`);
     }
 }
-
