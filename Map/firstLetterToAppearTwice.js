@@ -24,13 +24,9 @@ const repeatedCharacter = (str) => {
     for (let i = 0; i < str.length; i++) {
         let ch = str.charAt(i);
         
+        // Condition checking whether character has came again or not, if came again then frequency has to be '2' and we can return directly
         if (map.has(ch)) {
-            let freq = map.get(ch);
-            map.set(ch, freq + 1);
-
-            if (map.get(ch) === 2) {
-                return ch;
-            }
+            return ch;
         } else {
             map.set(ch, 1);
         }
