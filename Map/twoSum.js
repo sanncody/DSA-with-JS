@@ -18,11 +18,11 @@ const numbers = new Array(size);
 console.log();
 
 for (let i = 0; i < numbers.length; i++) {
-    numbers[i] = prompt(`Enter number ${i + 1}: `);
+    numbers[i] = Number(prompt(`Enter number ${i + 1}: `));
 }
 console.log();
 
-const target = Number("Enter the target: ");
+const target = Number(prompt("Enter the target: "));
 console.log();
 
 const twoSum = (nums, target) => {
