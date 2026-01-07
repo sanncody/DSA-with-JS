@@ -16,12 +16,12 @@ console.log(arr);
 console.log();
 const map = new Map();
 
-for (let i = 0; i < arr.length; i++) {
-    if (map.has(arr[i])) {
-        let elemCount = map.get(arr[i]);
-        map.set(arr[i], elemCount + 1);
+for (let element of arr) {
+    if (map.has(element)) {
+        let elemCount = map.get(element);
+        map.set(element, elemCount + 1);
     } else {
-        map.set(arr[i], 1);
+        map.set(element, 1);
     }
 }
 
