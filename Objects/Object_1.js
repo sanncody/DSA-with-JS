@@ -74,3 +74,20 @@ copyObj.address.city = "Mumbai";
 console.log(copyObj); // { name: 'A', address: { city: 'Mumbai' } }
 console.log();
 console.log(obj); // { name: 'A', address: { city: 'Delhi' } }
+
+
+// Questions: Output based
+
+// 1.
+const arr = [{ x: 1 }, { x: 2 }];
+const copy = arr.map(i => ({ y: 10, ...i }));
+
+console.log(copy); //[ { y: 10, x: 1 }, { y: 10, x: 2 } ]
+
+
+// 2. 
+const anotherObj = { a: { b: 2 } };
+const anotherCopy = { ...anotherObj, a: { ...anotherObj.a } };
+anotherCopy.a.b = 10;
+
+console.log(anotherObj); // { a: { b: 2 } }
