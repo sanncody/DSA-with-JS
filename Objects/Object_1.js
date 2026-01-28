@@ -36,6 +36,7 @@ const newArr = data.map(d => ({ ...d, Gender: "" }));
 console.log(newArr);
 
 /**
+ * Output
  * [
   { name: 'Simran', age: 20, Gender: '' },
   { name: 'Alex', age: 25, Gender: '' },
@@ -48,6 +49,7 @@ const anotherArr = data.map(d => ({ ...d, Gender: d.age === 20 ? d["Gender"] = "
 console.log(anotherArr);
 
 /**
+ * Output
  * [
   { name: 'Simran', age: 20, Gender: 'Female' },
   { name: 'Alex', age: 25, Gender: 'Male' },
@@ -63,11 +65,12 @@ const obj = {
     }
 };
 
-console.log(obj);
+console.log(obj); // { name: 'A', address: { city: 'Delhi' } }
 
+// Spread creates a shallow copy. For nested objects, we must spread each level to avoid shared references.
 const copyObj = { ...obj, address: { ...obj.address } };
 copyObj.address.city = "Mumbai";
 
-console.log(copyObj);
+console.log(copyObj); // { name: 'A', address: { city: 'Mumbai' } }
 console.log();
-console.log(obj);
+console.log(obj); // { name: 'A', address: { city: 'Delhi' } }
